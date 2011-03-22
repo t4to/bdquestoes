@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Turma:</b>
+  <%= @prova.turma_id %>
+</p>
+
+<p>
+  <b>Materia:</b>
+  <%= @prova.materia %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @prova.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_prova_path(@prova) %> |
+<%= link_to 'Back', provas_path %>

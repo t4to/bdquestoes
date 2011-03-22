@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  prova_id: 1
+  pergunta: MyString
+  resposta: MyString
+
+two:
+  prova_id: 1
+  pergunta: MyString
+  resposta: MyString

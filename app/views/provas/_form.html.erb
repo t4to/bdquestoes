@@ -1,0 +1,33 @@
+<%= form_for(@prova) do |f| %>
+  <% if @prova.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prova.errors.count, "error") %> prohibited this prova from being saved:</h2>
+
+      <ul>
+      <% @prova.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :turma_id %><br />
+    
+	<%= f.collection_select(:turma_id, 
+			Turma.all,
+			:id, :nome, options ={:prompt => false}) %>
+	
+  </div>
+  <div class="field">
+    <%= f.label :materia %><br />
+    <%= f.text_field :materia %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

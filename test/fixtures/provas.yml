@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  turma_id: 1
+  materia: MyString
+  data: 2011-03-22
+
+two:
+  turma_id: 1
+  materia: MyString
+  data: 2011-03-22

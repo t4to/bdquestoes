@@ -1,0 +1,33 @@
+<%= form_for(@questao) do |f| %>
+  <% if @questao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@questao.errors.count, "error") %> prohibited this questao from being saved:</h2>
+
+      <ul>
+      <% @questao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prova_id %><br />
+    
+	<%= f.collection_select(:prova_id, 
+		Prova.all,
+		:id, :materia, options ={:prompt => false}) %>
+
+  </div>
+  <div class="field">
+    <%= f.label :pergunta %><br />
+    <%= f.text_field :pergunta %>
+  </div>
+  <div class="field">
+    <%= f.label :resposta %><br />
+    <%= f.text_field :resposta %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

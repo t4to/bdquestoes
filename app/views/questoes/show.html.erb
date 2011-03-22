@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Prova:</b>
+  <%= @questao.prova_id %>
+</p>
+
+<p>
+  <b>Pergunta:</b>
+  <%= @questao.pergunta %>
+</p>
+
+<p>
+  <b>Resposta:</b>
+  <%= @questao.resposta %>
+</p>
+
+
+<%= link_to 'Edit', edit_questao_path(@questao) %> |
+<%= link_to 'Back', questoes_path %>
